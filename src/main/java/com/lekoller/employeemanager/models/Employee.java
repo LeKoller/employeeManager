@@ -15,6 +15,7 @@ public class Employee implements Serializable {
     @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
+    @Column(nullable = false, unique = true)
     private String email;
     private String jobTitle;
     private String phone;
@@ -103,6 +104,7 @@ public class Employee implements Serializable {
                ", email='" + email + "'" +
                ", jobTitle='" + jobTitle + "'" +
                ", phone='" + phone + "'" +
-               ", imageUrl='" + imageUrl + "' }";
+               ", imageUrl='" + imageUrl + 
+               ", employeeCode='" + employeeCode + "' }";
     }
 }
